@@ -1,0 +1,355 @@
+Last login: Mon Sep  5 08:58:38 on console
+(base) NicolasVollmerMac@Nicolas-MBP ~ % exec bash
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ exec bash
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ mkdir Ironhack-Labs
+bash-3.2$ ls
+Applications		Library			Untitled.ipynb
+Desktop			Movies			Untitled1.ipynb
+Documents		Music			copied.txt
+Downloads		Pictures		iCloud Drive (Archive)
+Dropbox			Portfolio.xml		opt
+Google Drive		Public			temp
+Ironhack-Labs		Test
+Jupyter Notebook	Test1.txt
+bash-3.2$ cd Ironhack-Labs/
+bash-3.2$ ls
+bash-3.2$ git clone https://github.com/NicolasVollmer/lab-bash.git
+2022-09-05 11:53:03.526 xcodebuild[8649:110026] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionSentinelHostApplications for extension Xcode.DebuggerFoundation.AppExtensionHosts.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+2022-09-05 11:53:03.527 xcodebuild[8649:110026] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation.AppExtensionToBundleIdentifierMap.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+Cloning into 'lab-bash'...
+remote: Enumerating objects: 40, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 40 (delta 14), reused 10 (delta 10), pack-reused 17
+Receiving objects: 100% (40/40), 11.61 KiB | 11.61 MiB/s, done.
+Resolving deltas: 100% (14/14), done.
+bash-3.2$ ls
+lab-bash
+bash-3.2$ cd lab-bash/
+bash-3.2$ ls
+exercices	lorem		outputs
+inputs		lorem-copy	readme.md
+bash-3.2$ echo "Hello World"
+Hello World
+bash-3.2$ mkdir new_dir
+bash-3.2$ ls
+exercices	lorem		new_dir		readme.md
+inputs		lorem-copy	outputs
+bash-3.2$ git add . 
+bash-3.2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+bash-3.2$ rm new_dir/
+rm: new_dir/: is a directory
+bash-3.2$ ls
+exercices	lorem		new_dir		readme.md
+inputs		lorem-copy	outputs
+bash-3.2$ rmdir new_dir/
+bash-3.2$ ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+bash-3.2$ chdir lorem
+bash: chdir: command not found
+bash-3.2$ cd lorem
+bash-3.2$ ls
+at.txt		at.txte		lorem.txt	sed.txt
+bash-3.2$ cp sed.txt 
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+bash-3.2$ ls
+at.txt		at.txte		lorem.txt	sed.txt
+bash-3.2$ cd..
+bash: cd..: command not found
+bash-3.2$ cd ..
+bash-3.2$ ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+bash-3.2$ cd lorem
+bash-3.2$ ls
+at.txt		at.txte		lorem.txt	sed.txt
+bash-3.2$ cp lorem.txt pwd
+bash-3.2$ pwd
+/Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem
+bash-3.2$ cp lorem.txt ~/Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem-copy
+cp: /Users/NicolasVollmerMac/Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem-copy: No such file or directory
+bash-3.2$ cp lorem.txt 
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+bash-3.2$ cp sed.txt lorem-copy
+bash-3.2$ cd ..
+bash-3.2$ ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+bash-3.2$ cd lorem-copy/
+bash-3.2$ ls
+dummy_file.txt
+bash-3.2$ cp /Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem/sed.txt /Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem-copy/
+bash-3.2$ cd ..
+bash-3.2$ ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+bash-3.2$ cd lorem-copy/
+bash-3.2$ ls
+dummy_file.txt	sed.txt
+bash-3.2$ cd ..
+bash-3.2$ ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+bash-3.2$ cd lorem
+bash-3.2$ ls
+at.txt		at.txte		lorem-copy	lorem.txt	pwd		sed.txt
+bash-3.2$ cp /Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem/at.txt /Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem-copy/; cp /Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem/lorem.txt /Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem-copy/
+bash-3.2$ cd ..
+bash-3.2$ cd lorem-copy/
+bash-3.2$ ls
+at.txt		dummy_file.txt	lorem.txt	sed.txt
+bash-3.2$ cd /Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem/
+bash-3.2$ ls
+at.txt		at.txte		lorem-copy	lorem.txt	pwd		sed.txt
+bash-3.2$ ls sed.txt 
+sed.txt
+bash-3.2$ cat sed.txt 
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+bash-3.2$ cat at.txt; cat lorem.txt 
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+Et harum quidem rerum facilis est ET expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.bash-3.2$ 
+bash-3.2$ cat 3 /Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem-copy/sed.txt 
+cat: 3: No such file or directory
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+bash-3.2$ cd /Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem-copy/
+bash-3.2$ ls
+at.txt		dummy_file.txt	lorem.txt	sed.txt
+bash-3.2$ cat 3  sed.txt 
+cat: 3: No such file or directory
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+bash-3.2$ cat -n sed.txt 
+     1	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+     2	totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+     3	Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+     4	sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+     5	Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+     6	sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+     7	Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+     8	nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+     9	vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+bash-3.2$ sed -n -e 1p -e 3p sed.txt 
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+bash-3.2$ sed -n 1,3p sed.txt 
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+bash-3.2$ tail -3 sed.txt 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+bash-3.2$ echo "Homo homini lupus." >> sed.txt 
+bash-3.2$ cat -n sed.txt 
+     1	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+     2	totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+     3	Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+     4	sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+     5	Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+     6	sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+     7	Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+     8	nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+     9	vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+    10	Homo homini lupus.
+bash-3.2$ tail -n -3 sed.txt 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+bash-3.2$ cd ..
+bash-3.2$ cd lorem
+bash-3.2$ ls
+at.txt		at.txte		lorem-copy	lorem.txt	pwd		sed.txt
+bash-3.2$ sed 's/et/Et' at.txt
+sed: 1: "s/et/Et": unterminated substitute in regular expression
+bash-3.2$ sed -i -r 's/et/Et' at.txt
+sed: 1: "s/et/Et": unterminated substitute in regular expression
+bash-3.2$ cat at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+Et harum quidem rerum facilis est ET expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+bash-3.2$ cat at.txte
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellatbash-3.2$ 
+bash-3.2$ sed -i 's/et/ET' at.txte
+sed: 1: "at.txte": command a expects \ followed by text
+bash-3.2$ cat at.txte
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellatbash-3.2$ k
+bash: k: command not found
+bash-3.2$ cat -i 's/ET/et' at.txt
+cat: illegal option -- i
+usage: cat [-belnstuv] [file ...]
+bash-3.2$ sed -i 's/ET/et' at.txt
+sed: 1: "at.txt": command a expects \ followed by text
+bash-3.2$ sed 's/ET/et' at.txt
+sed: 1: "s/ET/et": unterminated substitute in regular expression
+bash-3.2$ sed 's/ET/et/' at.txt
+At vero eos et accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut et voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+bash-3.2$ sed -i 's/et/ET/' at.txt
+sed: 1: "at.txt": command a expects \ followed by text
+bash-3.2$ sed 's/et/ET/' at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+Et harum quidem rerum facilis est ET expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+bash-3.2$ whoami
+NicolasVollmerMac
+bash-3.2$ id -F
+Nicolas Vollmer
+bash-3.2$ pwd
+/Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem
+bash-3.2$ ls .txt
+ls: .txt: No such file or directory
+bash-3.2$ ls *.txt
+at.txt		lorem.txt	sed.txt
+bash-3.2$ wc -l sed.txt 
+       9 sed.txt
+bash-3.2$ cat -n sed.txt | wc sed.txt 
+       9     131     891 sed.txt
+bash-3.2$ cat sed.txt | wc -l sed.txt 
+       9 sed.txt
+bash-3.2$ cat sed.txt 
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+bash-3.2$ ma grep
+bash: ma: command not found
+bash-3.2$ man grep
+bash-3.2$ man grep
+bash-3.2$ pwd
+/Users/NicolasVollmerMac/Ironhack-Labs/lab-bash/lorem
+bash-3.2$ ls / -dg *lorem* 
+ls: -dg: No such file or directory
+lorem-copy	lorem.txt
+
+/:
+Applications	Users		cores		home		sbin		var
+Library		Volumes		dev		opt		tmp
+System		bin		etc		private		usr
+bash-3.2$ ls / -dg *lorem* 
+ls: -dg: No such file or directory
+lorem-copy	lorem.txt
+
+/:
+Applications	Users		cores		home		sbin		var
+Library		Volumes		dev		opt		tmp
+System		bin		etc		private		usr
+bash-3.2$ ls / -dg *lorem* | wc -l
+ls: -dg: No such file or directory
+      20
+bash-3.2$ ls
+at.txt		at.txte		lorem-copy	lorem.txt	pwd		sed.txt
+bash-3.2$ read
+Nicolas Vollmer
+bash-3.2$ echo $REPLY
+Nicolas Vollmer
+bash-3.2$ read name
+Nicolas Vollmer
+bash-3.2$ echo $name
+Nicolas Vollmer
+bash-3.2$ ls
+at.txt		at.txte		lorem-copy	lorem.txt	pwd		sed.txt
+bash-3.2$ cd ..
+bash-3.2$ mkdir $name
+bash-3.2$ ls
+Nicolas		exercices	lorem		outputs
+Vollmer		inputs		lorem-copy	readme.md
+bash-3.2$ rm $name
+rm: Nicolas: is a directory
+rm: Vollmer: is a directory
+bash-3.2$ rmdir $name
+bash-3.2$ ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+bash-3.2$ 
